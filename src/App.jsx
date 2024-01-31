@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { ROUTES } from './common/routes/routes';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -18,9 +18,7 @@ export const App = () => {
         <Route path={ROUTES.HOME} element={<Layout />}>
           <Route index path={ROUTES.HOME} element={<HomePage />} />
 
-
           <Route path={ROUTES.ABOUT} element={<AboutPage />} />
-
 
           <Route path={ROUTES.BLOG} element={<BlogPage />} />
           <Route path={`${ROUTES.BLOG}/:id`} element={<SinglePage />} />

@@ -11,15 +11,15 @@ export const SinglePage = () => {
       .then((data) => setPosts(data));
   }, [id]);
   const navigate = useNavigate();
-  const goBack = () => navigate(-1);
-  const goHome = () => navigate('/', { replace: true });
+  const goBackPage = () => navigate(-1);
+  const goHomePage = () => navigate('/', { replace: true });
   return (
     <div className='div'>
-      <button className='back' onClick={goBack}>
+      <button className='back' onClick={goBackPage}>
         Go Back
       </button>
       {/* Bad approach */}
-      <button className='back' onClick={goHome}>
+      <button className='back' onClick={goHomePage}>
         Go Home
       </button>
       {posts && (
